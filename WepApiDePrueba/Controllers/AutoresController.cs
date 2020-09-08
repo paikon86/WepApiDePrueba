@@ -52,7 +52,7 @@ namespace WepApiDePrueba.Controllers
         {
             var autorCreacion = mapper.Map<Author>(autor);
             context.Autores.Add(autorCreacion);
-            string axel = "axe,";
+            string axel = "axe,4";
             context.SaveChanges();
             var autorDto = mapper.Map<AutorDto>(autorCreacion);
             return new CreatedAtRouteResult("ObtenerAutor", new { id = autorDto.Id } , autorDto);
